@@ -1,4 +1,5 @@
 describe('makeTriangle', function() {
+    // check for easy triangle, equilateral
     it("takes a triangle with a=1, b=1, c=1 and returns equilateral", function() {
         expect(makeTriangle(1,1,1)).to.equal('equilateral')
     });
@@ -7,6 +8,7 @@ describe('makeTriangle', function() {
         expect(makeTriangle(2,2,2)).to.equal('equilateral')
     });
 
+    // check for isosceles
     it("takes a triangle with a=2, b=2, c=3 and returns isosceles", function() {
         expect(makeTriangle(2,2,3)).to.equal('isosceles')
     });
@@ -19,6 +21,7 @@ describe('makeTriangle', function() {
         expect(makeTriangle(2,3,3)).to.equal('isosceles')
     });
 
+    // check if anything is equal
     it("takes a triangle with a=2, b=3, c=4 and returns scalene", function() {
         expect(makeTriangle(2,3,4)).to.equal('scalene')
     });
@@ -31,6 +34,7 @@ describe('makeTriangle', function() {
         expect(makeTriangle(7,5,4)).to.equal('scalene')
     });
 
+    // make sure it is actually a triangle
     it("takes a triangle with a=1, b=1, c=7 and returns This is not a triangle", function() {
         expect(makeTriangle(1,1,7)).to.equal('This is not a triangle')
     });
@@ -39,6 +43,7 @@ describe('makeTriangle', function() {
         expect(makeTriangle(2,8,2)).to.equal('This is not a triangle')
     });
 
+    // run one more test just to be sure
     it("takes a triangle with a=3, b=4, c=5 and returns scalene", function() {
         expect(makeTriangle(3,4,5)).to.equal('scalene')
     });
