@@ -14,4 +14,12 @@ describe('makeTriangle', function() {
     it("takes a triangle with a=2, b=3, c=3 and returns isosceles", function() {
         expect(makeTriangle(2,3,3)).to.equal('isosceles')
     });
+
+    it("takes a triangle with a=2, b=3, c=6 and returns scalene", function() {
+        expect(makeTriangle(2,3,6)).to.equal('scalene')
+    });
+
+    it("takes a triangle with a=1, b=3, c=7 and returns scalene", function() {
+        expect(makeTriangle(1,3,7)).to.equal('scalene')
+    });
 })
