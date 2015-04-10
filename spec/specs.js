@@ -38,4 +38,8 @@ describe('makeTriangle', function() {
     it("takes a triangle with a=2, b=8, c=2 and returns This is not a triangle", function() {
         expect(makeTriangle(2,8,2)).to.equal('This is not a triangle')
     });
+
+    it("takes a triangle with a=3, b=4, c=5 and returns scalene", function() {
+        expect(makeTriangle(3,4,5)).to.equal('scalene')
+    });
 })

@@ -2,30 +2,40 @@
 
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Base Converter</title>
+    <title>Triangle Finder</title>
   </head>
   <body>
     <div class="container">
-      <h1>Base Number Generator</h1>
+      <div class="row">
+        <h1>Triangle Sides Please</h1>
 
-      <form id="converter">
-        <label for="number">Enter your number</label>
-        <input type="text" id="number">
+        <div class="col-md-12">
+          <form id="triangle-input">
+            <div class="form-group">
+              <label for="a-side">Enter a Side:</label>
+              <input type="number" id="a-side" step="1">
+            </div>
+            <div class="form-group">
+              <label for="b-side">Enter a Side:</label>
+              <input type="number" id="b-side" step="1">
+            </div>
+            <div class="form-group">
+              <label for="c-side">Enter a Side:</label>
+              <input type="number" id="c-side" step="1">
+            </div>
 
-        <select id="base">
-          <option value="2">Binary</option>
-          <option value="3">Trinary</option>
-          <option value="16">Hexadecimal</option>
-        </select>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
 
-        <button type="submit">Convert</button>
-      </form>
+        <div id="return" class="col-md-12">
+          <p class="h2">Your triangle type is:<br><br> <span id="triangle-output"></span></p>
+        </div>
 
-      <div id="return">
-        <p>Your number in base <span id="base-output"></span> is: <span id="number-output"></span></p>
       </div>
     </div>
   </body>

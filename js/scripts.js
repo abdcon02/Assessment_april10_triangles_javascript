@@ -2,8 +2,7 @@ function makeTriangle(a,b,c){
   var desc_number_array = [a,b,c].sort(function(x,y) {
     return y-x;
   });
-  console.log(desc_number_array);
-  console.log(desc_number_array[0] >= (desc_number_array[1] + desc_number_array[2]));
+
   if (desc_number_array[0] >= desc_number_array[1] + desc_number_array[2]){
     return "This is not a triangle";
   } else if(a === b && b === c && c === a){
@@ -14,3 +13,19 @@ function makeTriangle(a,b,c){
     return 'scalene';
     };
 }
+
+$(document).ready(function() {
+  $("form#triangle-input").submit(function(event) {
+    var a = parseInt($("#a-side").val());
+    var b = parseInt($("#b-side").val());
+    var c = parseInt($("#c-side").val());
+
+    var result = makeTriangle(a,b,c);
+    console.log(result);
+    debugger;
+    $("#triangle-output").text(result);
+    $("#return").show();
+
+    event.preventDefault();
+  });
+});
