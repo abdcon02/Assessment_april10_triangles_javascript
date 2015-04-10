@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Base Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Base Number Generator</h1>
+
+      <form id="converter">
+        <label for="number">Enter your number</label>
+        <input type="text" id="number">
+
+        <select id="base">
+          <option value="2">Binary</option>
+          <option value="3">Trinary</option>
+          <option value="16">Hexadecimal</option>
+        </select>
+
+        <button type="submit">Convert</button>
+      </form>
+
+      <div id="return">
+        <p>Your number in base <span id="base-output"></span> is: <span id="number-output"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
